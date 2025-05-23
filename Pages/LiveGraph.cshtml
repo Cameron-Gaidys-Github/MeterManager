@@ -1,0 +1,100 @@
+@page
+@{
+    ViewData["Title"] = "Live Flow Graph";
+}
+
+<h2>Live Flow Graph</h2>
+<div style="margin-bottom:10px;">
+    <button onclick="chart.resetZoom()">Reset Zoom</button>
+</div>
+
+<!-- Responsive container for the chart -->
+<div style="position: relative; width: 100%; height: 60vh;">
+    <canvas id="liveFlowChart"></canvas>
+</div>
+
+<!-- Chart.js v4.4.1 -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+
+<!-- Compatible Zoom Plugin (v2.0.1) -->
+<script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-zoom@2.0.1/dist/chartjs-plugin-zoom.min.js"></script>
+
+<script>
+    Chart.register(ChartZoom);
+
+    const meters = [
+        { id: "1", name: "Farmhouse" },
+        { id: "2", name: "ValleyHouse" },
+        { id: "3", name: "GateHouse" },
+        { id: "4", name: "SchoolHouse" },
+        { id: "5", name: "Claybrook LowFlow" }
+    ];
+    const flowData = meters.map(() => []);
+    const timeLabels = [];
+
+    const ctx = document.getElementById('liveFlowChart').getContext('2d');
+    const chart = new Chart(ctx, {
+        type: 'line',
+        data: {
+            labels: timeLabels,
+            datasets: meters.map((meter, idx) => ({
+                label: `${meter.name} (ID: ${meter.id})`,
+                data: flowData[idx],
+                borderColor: `hsl(${idx * 60}, 70%, 50%)`,
+                fill: false
+            }))
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false, // Allow container to control size
+            animation: false,
+            scales: {
+                x: {
+                    title: { display: true, text: 'Time' }
+                },
+                y: {
+                    title: { display: true, text: 'Flow (gpm)' }
+                }
+            },
+            plugins: {
+                zoom: {
+                    zoom: {
+                        wheel: { enabled: true },
+                        pinch: { enabled: true },
+                        mode: 'x'
+                    },
+                    pan: {
+                        enabled: true,
+                        mode: 'x'
+                    }
+                }
+            }
+        }
+    });
+
+    function updateFlows() {
+        fetch('/Api/ActiveFlow')
+            .then(r => r.json())
+            .then(data => {
+                const now = new Date().toLocaleTimeString();
+                timeLabels.push(now);
+                if (timeLabels.length > 300) timeLabels.shift();
+
+                data.forEach((meter) => {
+                    const meterIdx = meters.findIndex(m => m.id === meter.meterID.toString());
+                    if (meterIdx !== -1) {
+                        let val = parseFloat(meter.flowRate);
+                        if (isNaN(val)) val = 0;
+                        flowData[meterIdx].push(val);
+                        if (flowData[meterIdx].length > 300) flowData[meterIdx].shift();
+                    }
+                });
+                chart.update();
+            });
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+        updateFlows();
+        setInterval(updateFlows, 1000);
+    });
+</script>

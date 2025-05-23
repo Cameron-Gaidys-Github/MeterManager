@@ -1,0 +1,175 @@
+﻿@page
+@model MeterManager.Pages.IndexModel
+@{
+    ViewData["Title"] = "Water Usage Report";
+}
+
+<h2>Water Usage Report</h2>
+
+<form method="get" class="mb-3">
+    <label>Start Date:
+        <input type="date" name="startDate" value="@(Request.Query["startDate"])" />
+    </label>
+    <label>End Date:
+        <input type="date" name="endDate" value="@(Request.Query["endDate"])" />
+    </label>
+    <button type="submit" class="btn btn-primary btn-sm">Filter</button>
+    <a href="/" class="btn btn-secondary btn-sm">Reset</a>
+</form>
+
+@if (Model.Meters != null && Model.Meters.Any() && Model.HourTimestamps.Any())
+{
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Timestamp</th>
+                @foreach (var meter in Model.Meters)
+                {
+                    if (meter.MeterID == 5)
+                    {
+                        <th>
+                            Claybrook LowFlow<br />(ID: 5)<br />
+                            <span id="flow-5" style="font-weight:bold;color:#007bff;">Loading...</span>
+                        </th>
+                        <th>
+                            Claybrook HighFlow<br />(ID: 5)<br />
+                            <span id="flow-high-5" style="font-weight:bold;color:#28a745;">Loading...</span>
+                        </th>
+                    }
+                    else
+                    {
+                        <th>
+                            @meter.Location<br />(ID: @meter.MeterID)<br />
+                            <span id="flow-@meter.MeterID" style="font-weight:bold;color:#007bff;">Loading...</span>
+                        </th>
+                    }
+                }
+            </tr>
+        </thead>
+        <tbody>
+            @for (int i = 0; i < Model.HourTimestamps.Count; i++)
+            {
+                var timestamp = Model.HourTimestamps.OrderByDescending(t => t).ElementAt(i);
+                <tr>
+                    <td>@timestamp.ToString("M/d/yyyy h:mm tt")</td>
+                    @foreach (var meter in Model.Meters)
+                    {
+                        var meterIdStr = meter.MeterID.ToString();
+                        if (meter.MeterID == 5)
+                        {
+                            // LOWFLOW
+                            if (Model.HourlyReadings.TryGetValue(timestamp, out var meterMap) &&
+                                meterMap.TryGetValue(meterIdStr, out var reading))
+                            {
+                                decimal diff = 0;
+                                if (i + 1 < Model.HourTimestamps.Count)
+                                {
+                                    var prevTimestamp = Model.HourTimestamps.OrderByDescending(t => t).ElementAt(i + 1);
+                                    if (Model.HourlyReadings.TryGetValue(prevTimestamp, out var prevMeterMap) &&
+                                        prevMeterMap.TryGetValue(meterIdStr, out var prevReading))
+                                    {
+                                        diff = reading.MeterReading - prevReading.MeterReading;
+                                    }
+                                }
+                                <td>
+                                    @reading.MeterReading<br />
+                                    @diff gallons
+                                </td>
+                            }
+                            else
+                            {
+                                <td>0<br />0 gallons</td>
+                            }
+
+                            // HIGHFLOW
+                            if (Model.HourlyReadings.TryGetValue(timestamp, out var meterMap2) &&
+                                meterMap2.TryGetValue(meterIdStr, out var reading2))
+                            {
+                                decimal highDiff = 0;
+                                if (i + 1 < Model.HourTimestamps.Count)
+                                {
+                                    var prevTimestamp = Model.HourTimestamps.OrderByDescending(t => t).ElementAt(i + 1);
+                                    if (Model.HourlyReadings.TryGetValue(prevTimestamp, out var prevMeterMap2) &&
+                                        prevMeterMap2.TryGetValue(meterIdStr, out var prevReading2))
+                                    {
+                                        highDiff = (reading2.HighFlowReading ?? 0) - (prevReading2.HighFlowReading ?? 0);
+                                    }
+                                }
+                                <td>
+                                    @(reading2.HighFlowReading ?? 0)<br />
+                                    @highDiff gallons
+                                </td>
+                            }
+                            else
+                            {
+                                <td>0<br />0 gallons</td>
+                            }
+                        }
+                        else
+                        {
+                            if (Model.HourlyReadings.TryGetValue(timestamp, out var meterMap) &&
+                                meterMap.TryGetValue(meterIdStr, out var reading))
+                            {
+                                decimal diff = 0;
+                                if (i + 1 < Model.HourTimestamps.Count)
+                                {
+                                    var prevTimestamp = Model.HourTimestamps.OrderByDescending(t => t).ElementAt(i + 1);
+                                    if (Model.HourlyReadings.TryGetValue(prevTimestamp, out var prevMeterMap) &&
+                                        prevMeterMap.TryGetValue(meterIdStr, out var prevReading))
+                                    {
+                                        diff = reading.MeterReading - prevReading.MeterReading;
+                                    }
+                                }
+                                <td>
+                                    @reading.MeterReading<br />
+                                    @diff gallons
+                                </td>
+                            }
+                            else
+                            {
+                                <td>0<br />0 gallons</td>
+                            }
+                        }
+                    }
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <p>No readings found.</p>
+}
+
+@section Scripts {
+<script>
+function updateFlows() {
+    fetch('/Api/ActiveFlow')
+        .then(r => r.json())
+        .then(data => {
+            console.log("Fetched data:", data); // Debug: show API data
+            data.forEach(meter => {
+                // Always update flow-<meterID>
+                const flowElem = document.getElementById('flow-' + meter.meterID);
+                console.log('meterID:', meter.meterID, 'flowElem:', flowElem); // Debug: show element
+                if (flowElem) {
+                    flowElem.textContent = meter.flowRate !== null ? meter.flowRate + ' gpm' : 'N/A';
+                }
+                // For meter 5, also update flow-high-5
+                if (meter.meterID == 5) {
+                    const highElem = document.getElementById('flow-high-5');
+                    console.log('meterID 5 highElem:', highElem); // Debug: show high flow element
+                    if (highElem) highElem.textContent = meter.highFlowRate !== null ? meter.highFlowRate + ' gpm (High)' : 'N/A';
+                }
+            });
+        })
+        .catch(err => {
+            console.error("Error fetching flow data:", err);
+        });
+}
+document.addEventListener('DOMContentLoaded', function() {
+    setInterval(updateFlows, 1000);
+    updateFlows();
+});
+</script>
+}

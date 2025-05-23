@@ -1,0 +1,109 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+.navbar {
+  background-color: #A32020 !important;
+}
+.navbar .navbar-brand,
+.navbar .nav-link {
+  color: #fff !important;
+}
+.navbar .nav-link:hover,
+.navbar .nav-link:focus {
+  color: #ffd6d6 !important;
+}
+
+.form-floating > .form-control-plaintext::placeholder, .form-floating > .form-control::placeholder {
+  color: var(--bs-secondary-color);
+  text-align: end;
+}
+
+.form-floating > .form-control-plaintext:focus::placeholder, .form-floating > .form-control:focus::placeholder {
+  text-align: start;
+}
+
+/* --- Custom Enhancements --- */
+
+/* Subtle background for the whole page */
+body {
+  background: linear-gradient(135deg, #f8fafc 0%, #e0e7ef 100%);
+  font-family: 'Segoe UI', Arial, sans-serif;
+  color: #222;
+}
+
+/* Card container style */
+.card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+  padding: 2rem;
+  margin-bottom: 2rem;
+  transition: box-shadow 0.2s;
+}
+.card:hover {
+  box-shadow: 0 4px 24px rgba(0,0,0,0.13);
+}
+
+/* Enhanced button styles */
+.btn {
+  border-radius: 6px;
+  padding: 0.5rem 1.25rem;
+  font-weight: 500;
+  transition: background 0.2s, box-shadow 0.2s;
+  background: #258cfb;
+  color: #fff;
+  border: none;
+}
+.btn:hover, .btn:focus {
+  background: #1769c2;
+  color: #fff;
+  box-shadow: 0 2px 8px rgba(37,140,251,0.15);
+}
+
+/* Headings */
+h1, h2, h3, h4, h5 {
+  font-family: 'Segoe UI Semibold', Arial, sans-serif;
+  color: #1769c2;
+}
+
+/* Form controls */
+.form-control {
+  border-radius: 6px;
+  border: 1px solid #b6c2d2;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.form-control:focus {
+  border-color: #258cfb;
+  box-shadow: 0 0 0 0.2rem rgba(37,140,251,0.15);
+}
+
+/* Links */
+a {
+  color: #258cfb;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+a:hover {
+  color: #1769c2;
+  text-decoration: underline;
+}
