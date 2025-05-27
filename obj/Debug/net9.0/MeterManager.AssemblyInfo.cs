@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MeterManager")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+644dc93bdc953f6a11fa336d24f3258a250177cf")]
 [assembly: System.Reflection.AssemblyProductAttribute("MeterManager")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MeterManager")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

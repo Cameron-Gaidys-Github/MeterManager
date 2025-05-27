@@ -9,6 +9,9 @@ C:\Users\cgaidys\MeterManager\bin\Debug\net9.0\MeterManager.dll
 C:\Users\cgaidys\MeterManager\bin\Debug\net9.0\MeterManager.pdb
 C:\Users\cgaidys\MeterManager\bin\Debug\net9.0\Azure.Core.dll
 C:\Users\cgaidys\MeterManager\bin\Debug\net9.0\Azure.Identity.dll
+C:\Users\cgaidys\MeterManager\bin\Debug\net9.0\EPPlus.dll
+C:\Users\cgaidys\MeterManager\bin\Debug\net9.0\EPPlus.Interfaces.dll
+C:\Users\cgaidys\MeterManager\bin\Debug\net9.0\HtmlAgilityPack.dll
 C:\Users\cgaidys\MeterManager\bin\Debug\net9.0\Humanizer.dll
 C:\Users\cgaidys\MeterManager\bin\Debug\net9.0\Microsoft.Bcl.AsyncInterfaces.dll
 C:\Users\cgaidys\MeterManager\bin\Debug\net9.0\Microsoft.Build.Locator.dll
@@ -26,10 +29,16 @@ C:\Users\cgaidys\MeterManager\bin\Debug\net9.0\Microsoft.EntityFrameworkCore.Rel
 C:\Users\cgaidys\MeterManager\bin\Debug\net9.0\Microsoft.EntityFrameworkCore.SqlServer.dll
 C:\Users\cgaidys\MeterManager\bin\Debug\net9.0\Microsoft.Extensions.Caching.Abstractions.dll
 C:\Users\cgaidys\MeterManager\bin\Debug\net9.0\Microsoft.Extensions.Caching.Memory.dll
+C:\Users\cgaidys\MeterManager\bin\Debug\net9.0\Microsoft.Extensions.Configuration.dll
 C:\Users\cgaidys\MeterManager\bin\Debug\net9.0\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Users\cgaidys\MeterManager\bin\Debug\net9.0\Microsoft.Extensions.Configuration.FileExtensions.dll
+C:\Users\cgaidys\MeterManager\bin\Debug\net9.0\Microsoft.Extensions.Configuration.Json.dll
 C:\Users\cgaidys\MeterManager\bin\Debug\net9.0\Microsoft.Extensions.DependencyInjection.dll
 C:\Users\cgaidys\MeterManager\bin\Debug\net9.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
 C:\Users\cgaidys\MeterManager\bin\Debug\net9.0\Microsoft.Extensions.DependencyModel.dll
+C:\Users\cgaidys\MeterManager\bin\Debug\net9.0\Microsoft.Extensions.FileProviders.Abstractions.dll
+C:\Users\cgaidys\MeterManager\bin\Debug\net9.0\Microsoft.Extensions.FileProviders.Physical.dll
+C:\Users\cgaidys\MeterManager\bin\Debug\net9.0\Microsoft.Extensions.FileSystemGlobbing.dll
 C:\Users\cgaidys\MeterManager\bin\Debug\net9.0\Microsoft.Extensions.Logging.dll
 C:\Users\cgaidys\MeterManager\bin\Debug\net9.0\Microsoft.Extensions.Logging.Abstractions.dll
 C:\Users\cgaidys\MeterManager\bin\Debug\net9.0\Microsoft.Extensions.Options.dll
@@ -42,6 +51,7 @@ C:\Users\cgaidys\MeterManager\bin\Debug\net9.0\Microsoft.IdentityModel.Logging.d
 C:\Users\cgaidys\MeterManager\bin\Debug\net9.0\Microsoft.IdentityModel.Protocols.dll
 C:\Users\cgaidys\MeterManager\bin\Debug\net9.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
 C:\Users\cgaidys\MeterManager\bin\Debug\net9.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\cgaidys\MeterManager\bin\Debug\net9.0\Microsoft.IO.RecyclableMemoryStream.dll
 C:\Users\cgaidys\MeterManager\bin\Debug\net9.0\Microsoft.SqlServer.Server.dll
 C:\Users\cgaidys\MeterManager\bin\Debug\net9.0\Microsoft.Win32.SystemEvents.dll
 C:\Users\cgaidys\MeterManager\bin\Debug\net9.0\Mono.TextTemplating.dll
@@ -58,7 +68,9 @@ C:\Users\cgaidys\MeterManager\bin\Debug\net9.0\System.Formats.Asn1.dll
 C:\Users\cgaidys\MeterManager\bin\Debug\net9.0\System.IdentityModel.Tokens.Jwt.dll
 C:\Users\cgaidys\MeterManager\bin\Debug\net9.0\System.Memory.Data.dll
 C:\Users\cgaidys\MeterManager\bin\Debug\net9.0\System.Runtime.Caching.dll
+C:\Users\cgaidys\MeterManager\bin\Debug\net9.0\System.Security.Cryptography.Pkcs.dll
 C:\Users\cgaidys\MeterManager\bin\Debug\net9.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\cgaidys\MeterManager\bin\Debug\net9.0\System.Security.Cryptography.Xml.dll
 C:\Users\cgaidys\MeterManager\bin\Debug\net9.0\System.Security.Permissions.dll
 C:\Users\cgaidys\MeterManager\bin\Debug\net9.0\System.Text.Json.dll
 C:\Users\cgaidys\MeterManager\bin\Debug\net9.0\System.Windows.Extensions.dll
@@ -137,6 +149,7 @@ C:\Users\cgaidys\MeterManager\bin\Debug\net9.0\runtimes\win\lib\net6.0\Microsoft
 C:\Users\cgaidys\MeterManager\bin\Debug\net9.0\runtimes\unix\lib\net6.0\System.Drawing.Common.dll
 C:\Users\cgaidys\MeterManager\bin\Debug\net9.0\runtimes\win\lib\net6.0\System.Drawing.Common.dll
 C:\Users\cgaidys\MeterManager\bin\Debug\net9.0\runtimes\win\lib\net6.0\System.Runtime.Caching.dll
+C:\Users\cgaidys\MeterManager\bin\Debug\net9.0\runtimes\win\lib\net9.0\System.Security.Cryptography.Pkcs.dll
 C:\Users\cgaidys\MeterManager\bin\Debug\net9.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
 C:\Users\cgaidys\MeterManager\bin\Debug\net9.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
 C:\Users\cgaidys\MeterManager\obj\Debug\net9.0\MeterManager.csproj.AssemblyReference.cache
@@ -147,6 +160,7 @@ C:\Users\cgaidys\MeterManager\obj\Debug\net9.0\MeterManager.csproj.CoreCompileIn
 C:\Users\cgaidys\MeterManager\obj\Debug\net9.0\MeterManager.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\cgaidys\MeterManager\obj\Debug\net9.0\MeterManager.RazorAssemblyInfo.cache
 C:\Users\cgaidys\MeterManager\obj\Debug\net9.0\MeterManager.RazorAssemblyInfo.cs
+C:\Users\cgaidys\MeterManager\obj\Debug\net9.0\MeterManager.sourcelink.json
 C:\Users\cgaidys\MeterManager\obj\Debug\net9.0\scopedcss\Pages\Shared\_Layout.cshtml.rz.scp.css
 C:\Users\cgaidys\MeterManager\obj\Debug\net9.0\scopedcss\bundle\MeterManager.styles.css
 C:\Users\cgaidys\MeterManager\obj\Debug\net9.0\scopedcss\projectbundle\MeterManager.bundle.scp.css
@@ -229,4 +243,3 @@ C:\Users\cgaidys\MeterManager\obj\Debug\net9.0\refint\MeterManager.dll
 C:\Users\cgaidys\MeterManager\obj\Debug\net9.0\MeterManager.pdb
 C:\Users\cgaidys\MeterManager\obj\Debug\net9.0\MeterManager.genruntimeconfig.cache
 C:\Users\cgaidys\MeterManager\obj\Debug\net9.0\ref\MeterManager.dll
-C:\Users\cgaidys\MeterManager\bin\Debug\net9.0\HtmlAgilityPack.dll

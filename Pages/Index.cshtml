@@ -6,6 +6,7 @@
 
 <h2>Water Usage Report</h2>
 
+<!-- Filter Form -->
 <form method="get" class="mb-3">
     <label>Start Date:
         <input type="date" name="startDate" value="@(Request.Query["startDate"])" />
@@ -16,6 +17,11 @@
     <button type="submit" class="btn btn-primary btn-sm">Filter</button>
     <a href="/" class="btn btn-secondary btn-sm">Reset</a>
 </form>
+
+<!-- Download CSV Button -->
+<button id="downloadCsv" class="btn btn-info btn-sm mb-3">
+    Download CSV
+</button>
 
 @if (Model.Meters != null && Model.Meters.Any() && Model.HourTimestamps.Any())
 {
@@ -49,7 +55,9 @@
         <tbody>
             @for (int i = 0; i < Model.HourTimestamps.Count; i++)
             {
-                var timestamp = Model.HourTimestamps.OrderByDescending(t => t).ElementAt(i);
+                var timestamp = Model.HourTimestamps
+                                      .OrderByDescending(t => t)
+                                      .ElementAt(i);
                 <tr>
                     <td>@timestamp.ToString("M/d/yyyy h:mm tt")</td>
                     @foreach (var meter in Model.Meters)
@@ -57,22 +65,24 @@
                         var meterIdStr = meter.MeterID.ToString();
                         if (meter.MeterID == 5)
                         {
-                            // LOWFLOW
-                            if (Model.HourlyReadings.TryGetValue(timestamp, out var meterMap) &&
-                                meterMap.TryGetValue(meterIdStr, out var reading))
+                            <!-- LOWFLOW -->
+                            @if (Model.HourlyReadings.TryGetValue(timestamp, out var lowMap) &&
+                                 lowMap.TryGetValue(meterIdStr, out var lowReading))
                             {
                                 decimal diff = 0;
                                 if (i + 1 < Model.HourTimestamps.Count)
                                 {
-                                    var prevTimestamp = Model.HourTimestamps.OrderByDescending(t => t).ElementAt(i + 1);
-                                    if (Model.HourlyReadings.TryGetValue(prevTimestamp, out var prevMeterMap) &&
-                                        prevMeterMap.TryGetValue(meterIdStr, out var prevReading))
+                                    var prev = Model.HourTimestamps
+                                                    .OrderByDescending(t => t)
+                                                    .ElementAt(i + 1);
+                                    if (Model.HourlyReadings.TryGetValue(prev, out var prevLowMap) &&
+                                        prevLowMap.TryGetValue(meterIdStr, out var prevLowReading))
                                     {
-                                        diff = reading.MeterReading - prevReading.MeterReading;
+                                        diff = lowReading.MeterReading - prevLowReading.MeterReading;
                                     }
                                 }
                                 <td>
-                                    @reading.MeterReading<br />
+                                    @lowReading.MeterReading<br />
                                     @diff gallons
                                 </td>
                             }
@@ -81,22 +91,25 @@
                                 <td>0<br />0 gallons</td>
                             }
 
-                            // HIGHFLOW
-                            if (Model.HourlyReadings.TryGetValue(timestamp, out var meterMap2) &&
-                                meterMap2.TryGetValue(meterIdStr, out var reading2))
+                            <!-- HIGHFLOW -->
+                            @if (Model.HourlyReadings.TryGetValue(timestamp, out var highMap) &&
+                                 highMap.TryGetValue(meterIdStr, out var highReading))
                             {
                                 decimal highDiff = 0;
                                 if (i + 1 < Model.HourTimestamps.Count)
                                 {
-                                    var prevTimestamp = Model.HourTimestamps.OrderByDescending(t => t).ElementAt(i + 1);
-                                    if (Model.HourlyReadings.TryGetValue(prevTimestamp, out var prevMeterMap2) &&
-                                        prevMeterMap2.TryGetValue(meterIdStr, out var prevReading2))
+                                    var prev = Model.HourTimestamps
+                                                    .OrderByDescending(t => t)
+                                                    .ElementAt(i + 1);
+                                    if (Model.HourlyReadings.TryGetValue(prev, out var prevHighMap) &&
+                                        prevHighMap.TryGetValue(meterIdStr, out var prevHighReading))
                                     {
-                                        highDiff = (reading2.HighFlowReading ?? 0) - (prevReading2.HighFlowReading ?? 0);
+                                        highDiff = (highReading.HighFlowReading ?? 0)
+                                                 - (prevHighReading.HighFlowReading  ?? 0);
                                     }
                                 }
                                 <td>
-                                    @(reading2.HighFlowReading ?? 0)<br />
+                                    @(highReading.HighFlowReading ?? 0)<br />
                                     @highDiff gallons
                                 </td>
                             }
@@ -107,15 +120,17 @@
                         }
                         else
                         {
-                            if (Model.HourlyReadings.TryGetValue(timestamp, out var meterMap) &&
-                                meterMap.TryGetValue(meterIdStr, out var reading))
+                            @if (Model.HourlyReadings.TryGetValue(timestamp, out var map) &&
+                                 map.TryGetValue(meterIdStr, out var reading))
                             {
                                 decimal diff = 0;
                                 if (i + 1 < Model.HourTimestamps.Count)
                                 {
-                                    var prevTimestamp = Model.HourTimestamps.OrderByDescending(t => t).ElementAt(i + 1);
-                                    if (Model.HourlyReadings.TryGetValue(prevTimestamp, out var prevMeterMap) &&
-                                        prevMeterMap.TryGetValue(meterIdStr, out var prevReading))
+                                    var prev = Model.HourTimestamps
+                                                    .OrderByDescending(t => t)
+                                                    .ElementAt(i + 1);
+                                    if (Model.HourlyReadings.TryGetValue(prev, out var prevMap) &&
+                                        prevMap.TryGetValue(meterIdStr, out var prevReading))
                                     {
                                         diff = reading.MeterReading - prevReading.MeterReading;
                                     }
@@ -143,33 +158,59 @@ else
 
 @section Scripts {
 <script>
-function updateFlows() {
-    fetch('/Api/ActiveFlow')
-        .then(r => r.json())
-        .then(data => {
-            console.log("Fetched data:", data); // Debug: show API data
-            data.forEach(meter => {
-                // Always update flow-<meterID>
-                const flowElem = document.getElementById('flow-' + meter.meterID);
-                console.log('meterID:', meter.meterID, 'flowElem:', flowElem); // Debug: show element
-                if (flowElem) {
-                    flowElem.textContent = meter.flowRate !== null ? meter.flowRate + ' gpm' : 'N/A';
-                }
-                // For meter 5, also update flow-high-5
-                if (meter.meterID == 5) {
-                    const highElem = document.getElementById('flow-high-5');
-                    console.log('meterID 5 highElem:', highElem); // Debug: show high flow element
-                    if (highElem) highElem.textContent = meter.highFlowRate !== null ? meter.highFlowRate + ' gpm (High)' : 'N/A';
-                }
-            });
-        })
-        .catch(err => {
-            console.error("Error fetching flow data:", err);
-        });
-}
 document.addEventListener('DOMContentLoaded', function() {
-    setInterval(updateFlows, 1000);
+    // 1) Live flow updater
+    function updateFlows() {
+        fetch('/Api/ActiveFlow')
+            .then(r => r.json())
+            .then(data => {
+                data.forEach(m => {
+                    const el = document.getElementById('flow-' + m.meterID);
+                    if (el) el.textContent = m.flowRate != null ? m.flowRate + ' gpm' : 'N/A';
+                    if (m.meterID == 5) {
+                        const hi = document.getElementById('flow-high-5');
+                        if (hi) hi.textContent = m.highFlowRate != null
+                            ? m.highFlowRate + ' gpm (High)'
+                            : 'N/A';
+                    }
+                });
+            })
+            .catch(console.error);
+    }
     updateFlows();
+    setInterval(updateFlows, 1000);
+
+    // 2) CSV downloader
+    const btn = document.getElementById('downloadCsv');
+    if (btn) {
+        btn.addEventListener('click', function(e) {
+            e.preventDefault();
+            const url = '@Url.Page(null, "ExportCsv", new {
+                startDate = Request.Query["startDate"],
+                endDate   = Request.Query["endDate"]
+            })';
+            fetch(url)
+              .then(resp => {
+                if (!resp.ok) throw new Error('Export failed');
+                return resp.blob();
+              })
+              .then(blob => {
+                const blobUrl = URL.createObjectURL(blob);
+                const a = document.createElement('a');
+                a.href = blobUrl;
+                const ts = new Date().toISOString().slice(0,19).replace(/[-T:]/g,'');
+                a.download = `WaterUsage_${ts}.csv`;
+                document.body.appendChild(a);
+                a.click();
+                a.remove();
+                URL.revokeObjectURL(blobUrl);
+              })
+              .catch(err => {
+                console.error('CSV download error:', err);
+                alert('Could not download CSV. See console.');
+              });
+        });
+    }
 });
 </script>
 }
