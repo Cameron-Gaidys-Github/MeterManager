@@ -82,13 +82,13 @@
                                     }
                                 }
                                 <td>
-                                    @lowReading.MeterReading<br />
-                                    @diff gallons
+                                  @(string.Format("{0:0.0}", lowReading.MeterReading / 10m))<br />
+                                  @(string.Format("{0:0.0}", diff / 10m)) gallons
                                 </td>
                             }
                             else
                             {
-                                <td>0<br />0 gallons</td>
+                                <td>0.0<br />0.0 gallons</td>
                             }
 
                             <!-- HIGHFLOW -->
@@ -185,10 +185,10 @@ document.addEventListener('DOMContentLoaded', function() {
     if (btn) {
         btn.addEventListener('click', function(e) {
             e.preventDefault();
-            const url = '@Url.Page(null, "ExportCsv", new {
-                startDate = Request.Query["startDate"],
-                endDate   = Request.Query["endDate"]
-            })';
+            // Build the URL manually to avoid HTML encoding issues
+            const startDate = document.querySelector('input[name="startDate"]').value;
+            const endDate = document.querySelector('input[name="endDate"]').value;
+            const url = `?handler=ExportCsv&startDate=${encodeURIComponent(startDate)}&endDate=${encodeURIComponent(endDate)}`;
             fetch(url)
               .then(resp => {
                 if (!resp.ok) throw new Error('Export failed');

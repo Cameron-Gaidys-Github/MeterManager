@@ -39,6 +39,11 @@ namespace MeterManager.Pages
 
             var readings = await query.ToListAsync();
 
+            // --- BEGIN: Adjust Claybrook Meter 5 LowFlow values ---
+            // If you want to keep tenths for calculations, do NOT change MeterReading here.
+            // Only adjust for display/export below.
+            // --- END: Adjust Claybrook Meter 5 LowFlow values ---
+
             var readingsByHour = readings
                 .GroupBy(r => new DateTime(r.Timestamp.Year,
                                           r.Timestamp.Month,
@@ -70,7 +75,7 @@ namespace MeterManager.Pages
                 .ToListAsync();
 
             var sb = new StringBuilder();
-            sb.AppendLine("Meter ID,Date,Time,Meter Reading (gallons),Hourly Use (gallons),Total Daily Use (gallons)");
+            sb.AppendLine("Meter ID,Date,Time,Meter Reading (gallons),Hourly Use (gallons),Total Daily Use (gallons),High Flow Reading (gallons),High Flow Hourly Use (gallons),High Flow Daily Use (gallons)");
 
             // Group by meter to compute hourly and daily totals
             var byMeter = allReadings
@@ -82,30 +87,45 @@ namespace MeterManager.Pages
                 var meterId = meterGroup.Key.ToString();
                 var readings = meterGroup.OrderBy(r => r.Timestamp).ToList();
 
-                // Pre-calc total daily use (max−min per day)
+                // Pre-calc total daily use (max−min per day) for normal and high flow
                 var dailyTotals = readings
                     .GroupBy(r => r.Timestamp.Date)
                     .ToDictionary(
                         g => g.Key,
-                        g => g.Max(r => r.MeterReading) - g.Min(r => r.MeterReading)
+                        g => new {
+                            Total = g.Max(r => r.MeterReading) - g.Min(r => r.MeterReading),
+                            HighTotal = g.Max(r => r.HighFlowReading ?? 0) - g.Min(r => r.HighFlowReading ?? 0)
+                        }
                     );
 
-                long? prevReading = null;
+                double? prevReading = null;
+                long? prevHigh = null;
                 foreach (var r in readings)
                 {
                     var date = r.Timestamp.Date;
                     var time = r.Timestamp.ToString("HH:mm");
-                    var current = r.MeterReading;
+                    // Adjust for Claybrook Meter 5 LowFlow values: move last digit to tenths
+                    double current = r.MeterID == "5"
+                        ? r.MeterReading / 10.0
+                        : r.MeterReading;
+                    if (current < 0) current = 0; // Ensure no negative readings
+                    var highCurrent = r.HighFlowReading ?? 0;
                     var hourlyUse = prevReading.HasValue ? current - prevReading.Value : 0;
+                    var highHourlyUse = prevHigh.HasValue ? highCurrent - prevHigh.Value : 0;
                     prevReading = current;
-                    var dailyUse = dailyTotals[date];
+                    prevHigh = highCurrent;
+                    var dailyUse = dailyTotals[date].Total;
+                    var highDailyUse = dailyTotals[date].HighTotal;
 
                     sb.AppendLine($"{meterId}," +
-                                  $"{date:yyyy-MM-dd}," +
-                                  $"{time}," +
-                                  $"{current}," +
-                                  $"{hourlyUse}," +
-                                  $"{dailyUse}");
+                                $"{date:yyyy-MM-dd}," +
+                                $"{time}," +
+                                $"{current:0.0}," +
+                                $"{hourlyUse:0.0}," +
+                                $"{dailyUse}," +
+                                $"{(r.HighFlowReading.HasValue ? r.HighFlowReading.Value.ToString() : "")}," +
+                                $"{highHourlyUse}," +
+                                $"{highDailyUse}");
                 }
             }
 

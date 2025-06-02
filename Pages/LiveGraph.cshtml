@@ -13,9 +13,43 @@
     <canvas id="liveFlowChart"></canvas>
 </div>
 
+<!-- Live values section (horizontal format) -->
+<div id="liveValues" style="margin-top:30px;">
+    <h4>Current Flow Values</h4>
+    <table class="table table-bordered" style="width:100%;">
+        <thead>
+            <tr>
+                <th></th>
+                <th>Farmhouse<br>(ID:1)</th>
+                <th>ValleyHouse<br>(ID:2)</th>
+                <th>GateHouse<br>(ID:3)</th>
+                <th>SchoolHouse<br>(ID:4)</th>
+                <th>Claybrook LowFlow<br>(ID:5)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th>Flow Rate (gpm)</th>
+                <td id="flow-1">--</td>
+                <td id="flow-2">--</td>
+                <td id="flow-3">--</td>
+                <td id="flow-4">--</td>
+                <td id="flow-5">--</td>
+            </tr>
+            <tr>
+                <th>High Flow (gpm)</th>
+                <td id="highflow-1">N/A</td>
+                <td id="highflow-2">N/A</td>
+                <td id="highflow-3">N/A</td>
+                <td id="highflow-4">N/A</td>
+                <td id="highflow-5">--</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
 <!-- Chart.js v4.4.1 -->
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
-
 <!-- Compatible Zoom Plugin (v2.0.1) -->
 <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-zoom@2.0.1/dist/chartjs-plugin-zoom.min.js"></script>
 
@@ -72,6 +106,13 @@
         }
     });
 
+    function updateHighFlowNA() {
+        // Set all highflow values to N/A except Claybrook (ID:5)
+        for (let i = 1; i <= 4; i++) {
+            document.getElementById('highflow-' + i).textContent = "N/A";
+        }
+    }
+
     function updateFlows() {
         fetch('/Api/ActiveFlow')
             .then(r => r.json())
@@ -88,7 +129,22 @@
                         flowData[meterIdx].push(val);
                         if (flowData[meterIdx].length > 300) flowData[meterIdx].shift();
                     }
+                    // Update live values table
+                    const flowElem = document.getElementById('flow-' + meter.meterID);
+                    if (flowElem) flowElem.textContent = meter.flowRate ?? '--';
                 });
+
+                // Always set highflow-1 to highflow-4 to N/A
+                updateHighFlowNA();
+
+                // Only update highflow-5 (Claybrook)
+                const claybrook = data.find(m => m.meterID == 5);
+                if (claybrook) {
+                    document.getElementById('highflow-5').textContent = claybrook.highFlowRate ?? "--";
+                } else {
+                    document.getElementById('highflow-5').textContent = "--";
+                }
+
                 chart.update();
             });
     }

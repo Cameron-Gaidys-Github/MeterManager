@@ -6,6 +6,7 @@ using System.Net.Http;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using System.Linq;
+using MeterManager.Models;
 
 namespace MeterManager.Pages.Api
 {
@@ -20,9 +21,15 @@ namespace MeterManager.Pages.Api
             _httpClientFactory = httpClientFactory;
         }
 
+        private static List<EtherMeterProfile>? _cachedMeters = null;
+
         public async Task<IActionResult> OnGetAsync()
         {
-            var meters = _context.EtherMeterProfiles.ToList();
+            if (_cachedMeters == null)
+            {
+                _cachedMeters = _context.EtherMeterProfiles.ToList();
+            }
+            var meters = _cachedMeters;
             var client = _httpClientFactory.CreateClient();
             var results = new List<object>();
 
