@@ -28,12 +28,20 @@ build_property._RazorSourceGeneratorDebug =
 build_property.EffectiveAnalysisLevelStyle = 9.0
 build_property.EnableCodeStyleSeverity = 
 
+[C:/Users/cgaidys/MeterManager/Pages/Api/ActiveFlow.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQXBpXEFjdGl2ZUZsb3cuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/cgaidys/MeterManager/Pages/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/cgaidys/MeterManager/Pages/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/cgaidys/MeterManager/Pages/LiveGraph.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTGl2ZUdyYXBoLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/cgaidys/MeterManager/Pages/Privacy.cshtml]

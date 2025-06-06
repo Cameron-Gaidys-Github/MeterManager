@@ -165,7 +165,7 @@ C:\Users\cgaidys\MeterManager\obj\Debug\net9.0\scopedcss\Pages\Shared\_Layout.cs
 C:\Users\cgaidys\MeterManager\obj\Debug\net9.0\scopedcss\bundle\MeterManager.styles.css
 C:\Users\cgaidys\MeterManager\obj\Debug\net9.0\scopedcss\projectbundle\MeterManager.bundle.scp.css
 C:\Users\cgaidys\MeterManager\obj\Debug\net9.0\compressed\xsfit5k5f3-a22t12x76q.gz
-C:\Users\cgaidys\MeterManager\obj\Debug\net9.0\compressed\zwczvpbrj9-61n19gt1b8.gz
+C:\Users\cgaidys\MeterManager\obj\Debug\net9.0\compressed\zwczvpbrj9-l93i2b0kyz.gz
 C:\Users\cgaidys\MeterManager\obj\Debug\net9.0\compressed\26t6nn80q2-xtxxf3hu2r.gz
 C:\Users\cgaidys\MeterManager\obj\Debug\net9.0\compressed\oirtncoa2l-bqjiyaj88i.gz
 C:\Users\cgaidys\MeterManager\obj\Debug\net9.0\compressed\6dujsr9s4w-c2jlpeoesf.gz
@@ -243,3 +243,4 @@ C:\Users\cgaidys\MeterManager\obj\Debug\net9.0\refint\MeterManager.dll
 C:\Users\cgaidys\MeterManager\obj\Debug\net9.0\MeterManager.pdb
 C:\Users\cgaidys\MeterManager\obj\Debug\net9.0\MeterManager.genruntimeconfig.cache
 C:\Users\cgaidys\MeterManager\obj\Debug\net9.0\ref\MeterManager.dll
+C:\Users\cgaidys\MeterManager\obj\Debug\net9.0\staticwebassets.upToDateCheck.txt

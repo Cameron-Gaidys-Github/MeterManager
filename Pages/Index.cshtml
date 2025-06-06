@@ -109,8 +109,8 @@
                                     }
                                 }
                                 <td>
-                                    @(highReading.HighFlowReading ?? 0)<br />
-                                    @highDiff gallons
+                                    @(string.Format("{0:0.0}", (highReading.HighFlowReading ?? 0) / 10.0m))<br />
+                                    @(string.Format("{0:0.0}", highDiff / 10.0m)) gallons
                                 </td>
                             }
                             else

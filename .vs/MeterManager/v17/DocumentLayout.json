@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\cgaidys\\MeterManager\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{50EE83C5-94ED-9F44-9603-0E4ADEDC183D}|MeterManager.csproj|c:\\users\\cgaidys\\metermanager\\pages\\thresholdmgmtlistmeters.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{50EE83C5-94ED-9F44-9603-0E4ADEDC183D}|MeterManager.csproj|solutionrelative:pages\\thresholdmgmtlistmeters.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ThresholdMgmtListMeters.cshtml",
+              "DocumentMoniker": "C:\\Users\\cgaidys\\MeterManager\\Pages\\ThresholdMgmtListMeters.cshtml",
+              "RelativeDocumentMoniker": "Pages\\ThresholdMgmtListMeters.cshtml",
+              "ToolTip": "C:\\Users\\cgaidys\\MeterManager\\Pages\\ThresholdMgmtListMeters.cshtml",
+              "RelativeToolTip": "Pages\\ThresholdMgmtListMeters.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-06T16:08:05.549Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

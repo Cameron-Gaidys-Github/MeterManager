@@ -74,14 +74,71 @@ namespace MeterManager.Pages
                 .ThenBy(r => r.Timestamp)
                 .ToListAsync();
 
-            var sb = new StringBuilder();
-            sb.AppendLine("Meter ID,Date,Time,Meter Reading (gallons),Hourly Use (gallons),Total Daily Use (gallons),High Flow Reading (gallons),High Flow Hourly Use (gallons),High Flow Daily Use (gallons)");
-
-            // Group by meter to compute hourly and daily totals
+            // Group by meter for summary and details
             var byMeter = allReadings
                 .GroupBy(r => r.MeterID)
-                .OrderBy(g => g.Key);
+                .OrderBy(g => g.Key)
+                .ToList();
 
+            var sb = new StringBuilder();
+
+            // First row: skip one cell, then meter names
+            sb.AppendLine($",Farmhouse (1),ValleyHouse (2),GateHouse (3),SchoolHouse (4),Claybrook LowFlow (5),Claybrook HighFlow (5)");
+
+            // Second row: skip one cell, then total water use for each meter in timeframe
+            var totals = new List<string>();
+            foreach (var meter in byMeter)
+            {
+                var readings = meter.OrderBy(r => r.Timestamp).ToList();
+                if (readings.Count >= 2)
+                {
+                    // For Claybrook (ID 5), output both LowFlow and HighFlow
+                    if (meter.Key == "5")
+                    {
+                        var lowTotal = (readings.Last().MeterReading - readings.First().MeterReading) / 10.0;
+                        var highTotal = (readings.Last().HighFlowReading ?? 0) - (readings.First().HighFlowReading ?? 0);
+                        totals.Add($"{lowTotal:0.0},{highTotal}");
+                    }
+                    else
+                    {
+                        totals.Add((readings.Last().MeterReading - readings.First().MeterReading).ToString());
+                    }
+                }
+                else
+                {
+                    if (meter.Key == "5")
+                        totals.Add("0.0,0");
+                    else
+                        totals.Add("0");
+                }
+            }
+            // The order in header is: Farmhouse, ValleyHouse, GateHouse, SchoolHouse, Claybrook LowFlow, Claybrook HighFlow
+            // But byMeter is ordered by MeterID, so we need to insert the Claybrook HighFlow value after LowFlow
+            // We'll flatten the totals list accordingly
+            var totalsFlat = new List<string>();
+            for (int i = 0; i < totals.Count; i++)
+            {
+                if (i == 4 && totals[i].Contains(","))
+                {
+                    var split = totals[i].Split(',');
+                    totalsFlat.Add(split[0]); // LowFlow
+                    totalsFlat.Add(split[1]); // HighFlow
+                }
+                else
+                {
+                    totalsFlat.Add(totals[i]);
+                }
+            }
+            sb.AppendLine($"Total Water Usage over Timeframe,{string.Join(",", totalsFlat)}");
+
+            // Add two more blank rows
+            sb.AppendLine();
+            sb.AppendLine();
+
+            // Data table header
+            sb.AppendLine("Meter ID,Date,Time,Meter Reading (gallons),Hourly Use (gallons),Total Daily Use (gallons),High Flow Reading (gallons),High Flow Hourly Use (gallons),High Flow Daily Use (gallons)");
+
+            // Data rows
             foreach (var meterGroup in byMeter)
             {
                 var meterId = meterGroup.Key.ToString();
@@ -92,7 +149,8 @@ namespace MeterManager.Pages
                     .GroupBy(r => r.Timestamp.Date)
                     .ToDictionary(
                         g => g.Key,
-                        g => new {
+                        g => new
+                        {
                             Total = g.Max(r => r.MeterReading) - g.Min(r => r.MeterReading),
                             HighTotal = g.Max(r => r.HighFlowReading ?? 0) - g.Min(r => r.HighFlowReading ?? 0)
                         }
@@ -104,11 +162,10 @@ namespace MeterManager.Pages
                 {
                     var date = r.Timestamp.Date;
                     var time = r.Timestamp.ToString("HH:mm");
-                    // Adjust for Claybrook Meter 5 LowFlow values: move last digit to tenths
                     double current = r.MeterID == "5"
-                        ? r.MeterReading / 10.0
+                        ? (double)(r.MeterReading / 10m)
                         : r.MeterReading;
-                    if (current < 0) current = 0; // Ensure no negative readings
+                    if (current < 0) current = 0;
                     var highCurrent = r.HighFlowReading ?? 0;
                     var hourlyUse = prevReading.HasValue ? current - prevReading.Value : 0;
                     var highHourlyUse = prevHigh.HasValue ? highCurrent - prevHigh.Value : 0;
