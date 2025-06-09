@@ -1,0 +1,57 @@
+@page
+@model MeterManager.Pages.ThresholdMgmtListMetersModel
+@{
+    ViewData["Title"] = "SUGARBUSH RESORT - Water Usage Threshold Management";
+}
+
+<h2>@ViewData["Title"]</h2>
+<h4>Available EtherMeters</h4>
+
+<p><a class="btn btn-primary" asp-page="/ThresholdMgmtListMeters">Refresh List</a></p>
+
+@if (Model.MetersWithStatus != null && Model.MetersWithStatus.Any())
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Meter ID</th>
+                <th>Location</th>
+                <th>IP Address</th>
+                <th>Network</th>
+                <th>Meter</th>
+            </tr>
+        </thead>
+        <tbody>
+        @foreach (var item in Model.MetersWithStatus)
+        {
+            <tr>
+                <td>
+                    <a asp-page="/ThresholdMgmtShowProfile" asp-route-MeterID="@item.Meter.MeterID">
+                        @item.Meter.MeterID
+                    </a>
+                </td>
+                <td>
+                    <a asp-page="/ThresholdMgmtShowProfile" asp-route-MeterID="@item.Meter.MeterID">
+                        @item.Meter.Location
+                    </a>
+                </td>
+                <td>
+                    <a asp-page="/ThresholdMgmtShowProfile" asp-route-MeterID="@item.Meter.MeterID">
+                        @item.Meter.IPAddress
+                    </a>
+                </td>
+                <td>
+                    <img src="~/images/@(item.IsNetworkOnline ? "green" : "red").png" width="20" height="20" alt="@(item.IsNetworkOnline ? "Online" : "Offline")" />
+                </td>
+                <td>
+                    <img src="~/images/@(item.IsMeterOnline ? "green" : "red").png" width="20" height="20" alt="@(item.IsMeterOnline ? "Online" : "Offline")" />
+                </td>
+            </tr>
+        }
+    </tbody>
+    </table>
+}
+else
+{
+    <p>No meters found.</p>
+}

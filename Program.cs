@@ -3,16 +3,16 @@ using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
+// Configure services
 builder.Services.AddDbContext<SBCorpInetDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("SBCorpInetDb")));
 
-// Add services to the container.
 builder.Services.AddRazorPages();
 builder.Services.AddHttpClient();
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
+// Configure middleware
 if (!app.Environment.IsDevelopment())
 {
     app.UseExceptionHandler("/Error");
@@ -20,13 +20,12 @@ if (!app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+app.UseStaticFiles(); // Enables serving files from wwwroot
 
 app.UseRouting();
 
 app.UseAuthorization();
 
-app.MapStaticAssets();
-app.MapRazorPages()
-   .WithStaticAssets();
+app.MapRazorPages(); // This is what enables /Api/ActiveFlow
 
 app.Run();

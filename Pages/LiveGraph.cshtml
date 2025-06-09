@@ -114,7 +114,7 @@
     }
 
     function updateFlows() {
-        fetch('/Api/ActiveFlow')
+        fetch('@Url.Content("~/Api/ActiveFlow")')
             .then(r => r.json())
             .then(data => {
                 const now = new Date().toLocaleTimeString();

@@ -161,7 +161,7 @@ else
 document.addEventListener('DOMContentLoaded', function() {
     // 1) Live flow updater
     function updateFlows() {
-        fetch('/Api/ActiveFlow')
+        fetch('@Url.Content("~/Api/ActiveFlow")')
             .then(r => r.json())
             .then(data => {
                 data.forEach(m => {

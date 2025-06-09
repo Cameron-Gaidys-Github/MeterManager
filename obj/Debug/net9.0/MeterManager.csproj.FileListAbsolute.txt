@@ -243,4 +243,3 @@ C:\Users\cgaidys\MeterManager\obj\Debug\net9.0\refint\MeterManager.dll
 C:\Users\cgaidys\MeterManager\obj\Debug\net9.0\MeterManager.pdb
 C:\Users\cgaidys\MeterManager\obj\Debug\net9.0\MeterManager.genruntimeconfig.cache
 C:\Users\cgaidys\MeterManager\obj\Debug\net9.0\ref\MeterManager.dll
-C:\Users\cgaidys\MeterManager\obj\Debug\net9.0\staticwebassets.upToDateCheck.txt

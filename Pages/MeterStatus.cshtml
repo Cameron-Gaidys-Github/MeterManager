@@ -1,0 +1,67 @@
+@page
+@model MeterManager.Pages.MeterStatusModel
+@{
+    ViewData["Title"] = "Meter Status";
+}
+
+<h2>Meter Status</h2>
+<h4>Available EtherMeters</h4>
+
+@if (Model.MetersWithStatus != null && Model.MetersWithStatus.Any())
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Meter ID</th>
+                <th>Location</th>
+                <th>IP Address</th>
+                <th>Network</th>
+                <th>Meter</th>
+                <th>Network Fault</th>
+                <th>Meter Fault</th>
+            </tr>
+        </thead>
+        <tbody>
+        @foreach (var item in Model.MetersWithStatus)
+        {
+            <tr>
+        <td>
+            <a href="http://@(item.Meter?.IPAddress)" target="_blank">
+                @(item.Meter != null ? item.Meter.MeterID : "N/A")
+            </a>
+        </td>
+        <td>
+            <a href="http://@(item.Meter?.IPAddress)" target="_blank">
+                @(item.Meter != null ? item.Meter.Location : "N/A")
+            </a>
+        </td>
+        <td>
+            <a href="http://@(item.Meter?.IPAddress)" target="_blank">
+                @(item.Meter != null ? item.Meter.IPAddress : "N/A")
+            </a>
+        </td>
+        <td>
+            <img src="~/images/@(item.IsNetworkOnline ? "green" : "red").png" width="20" height="20" alt="@(item.IsNetworkOnline ? "Online" : "Offline")" />
+        </td>
+        <td>
+            <img src="~/images/@(item.IsMeterOnline ? "green" : "red").png" width="20" height="20" alt="@(item.IsMeterOnline ? "Online" : "Offline")" />
+        </td>
+        <td>
+            <span style="color:@(item.NetworkFault ? "red" : "green")">
+                @(item.NetworkFault ? "Fault" : "OK")
+            </span>
+        </td>
+        <td>
+            <span style="color:@(item.MeterFault ? "red" : "green")">
+                @(item.MeterFault ? "Fault" : "OK")
+            </span>
+        </td>
+    </tr>
+        }
+        </tbody>
+    </table>
+}
+else
+{
+    <p>No meters found.</p>
+}
