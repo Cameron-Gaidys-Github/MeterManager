@@ -1,5 +1,17 @@
 ﻿<Project>
   <ItemGroup>
+    <StaticWebAssetEndpoint Include="_content/MeterManager/css/livegraph.css">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\livegraph.css'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-blMQanBDd6V\u002BgbLbIgBWZadQ8r89V2UosKbPp1jc/Qs="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"455"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022blMQanBDd6V\u002BgbLbIgBWZadQ8r89V2UosKbPp1jc/Qs=\u0022"},{"Name":"Last-Modified","Value":"Thu, 12 Jun 2025 17:37:36 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/MeterManager/css/livegraph.y3ax2gi8y6.css">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\livegraph.css'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"y3ax2gi8y6"},{"Name":"integrity","Value":"sha256-blMQanBDd6V\u002BgbLbIgBWZadQ8r89V2UosKbPp1jc/Qs="},{"Name":"label","Value":"_content/MeterManager/css/livegraph.css"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"455"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022blMQanBDd6V\u002BgbLbIgBWZadQ8r89V2UosKbPp1jc/Qs=\u0022"},{"Name":"Last-Modified","Value":"Thu, 12 Jun 2025 17:37:36 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/MeterManager/css/site.a22t12x76q.css">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\site.css'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>

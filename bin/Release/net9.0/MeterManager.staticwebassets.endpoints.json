@@ -301,6 +301,304 @@
       ]
     },
     {
+      "Route": "css/livegraph.css",
+      "AssetFile": "css/livegraph.css.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.004098360656"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "243"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"MZjfZ59Rv+VRPz3Lfq+aIf7TGlDP2XG6VRdDRocExaU=\""
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"blMQanBDd6V+gbLbIgBWZadQ8r89V2UosKbPp1jc/Qs=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 12 Jun 2025 17:37:36 GMT"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-blMQanBDd6V+gbLbIgBWZadQ8r89V2UosKbPp1jc/Qs="
+        }
+      ]
+    },
+    {
+      "Route": "css/livegraph.css",
+      "AssetFile": "css/livegraph.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "455"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"blMQanBDd6V+gbLbIgBWZadQ8r89V2UosKbPp1jc/Qs=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 12 Jun 2025 17:37:36 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-blMQanBDd6V+gbLbIgBWZadQ8r89V2UosKbPp1jc/Qs="
+        }
+      ]
+    },
+    {
+      "Route": "css/livegraph.css.gz",
+      "AssetFile": "css/livegraph.css.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "243"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"MZjfZ59Rv+VRPz3Lfq+aIf7TGlDP2XG6VRdDRocExaU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 12 Jun 2025 17:37:36 GMT"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-MZjfZ59Rv+VRPz3Lfq+aIf7TGlDP2XG6VRdDRocExaU="
+        }
+      ]
+    },
+    {
+      "Route": "css/livegraph.y3ax2gi8y6.css",
+      "AssetFile": "css/livegraph.css.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.004098360656"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "243"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"MZjfZ59Rv+VRPz3Lfq+aIf7TGlDP2XG6VRdDRocExaU=\""
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"blMQanBDd6V+gbLbIgBWZadQ8r89V2UosKbPp1jc/Qs=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 12 Jun 2025 17:37:36 GMT"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "y3ax2gi8y6"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-blMQanBDd6V+gbLbIgBWZadQ8r89V2UosKbPp1jc/Qs="
+        },
+        {
+          "Name": "label",
+          "Value": "css/livegraph.css"
+        }
+      ]
+    },
+    {
+      "Route": "css/livegraph.y3ax2gi8y6.css",
+      "AssetFile": "css/livegraph.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "455"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"blMQanBDd6V+gbLbIgBWZadQ8r89V2UosKbPp1jc/Qs=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 12 Jun 2025 17:37:36 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "y3ax2gi8y6"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-blMQanBDd6V+gbLbIgBWZadQ8r89V2UosKbPp1jc/Qs="
+        },
+        {
+          "Name": "label",
+          "Value": "css/livegraph.css"
+        }
+      ]
+    },
+    {
+      "Route": "css/livegraph.y3ax2gi8y6.css.gz",
+      "AssetFile": "css/livegraph.css.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "243"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"MZjfZ59Rv+VRPz3Lfq+aIf7TGlDP2XG6VRdDRocExaU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 12 Jun 2025 17:37:36 GMT"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "y3ax2gi8y6"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-MZjfZ59Rv+VRPz3Lfq+aIf7TGlDP2XG6VRdDRocExaU="
+        },
+        {
+          "Name": "label",
+          "Value": "css/livegraph.css.gz"
+        }
+      ]
+    },
+    {
       "Route": "css/site.a22t12x76q.css",
       "AssetFile": "css/site.css.gz",
       "Selectors": [

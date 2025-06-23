@@ -3,24 +3,72 @@
   "WorkspaceRootPath": "C:\\Users\\cgaidys\\MeterManager\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{50EE83C5-94ED-9F44-9603-0E4ADEDC183D}|MeterManager.csproj|c:\\users\\cgaidys\\metermanager\\metermanager.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{50EE83C5-94ED-9F44-9603-0E4ADEDC183D}|MeterManager.csproj|solutionrelative:metermanager.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+      "AbsoluteMoniker": "D:0:0:{50EE83C5-94ED-9F44-9603-0E4ADEDC183D}|MeterManager.csproj|c:\\users\\cgaidys\\metermanager\\pages\\api\\activeflow.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{50EE83C5-94ED-9F44-9603-0E4ADEDC183D}|MeterManager.csproj|solutionrelative:pages\\api\\activeflow.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{50EE83C5-94ED-9F44-9603-0E4ADEDC183D}|MeterManager.csproj|c:\\users\\cgaidys\\metermanager\\pages\\meterstatus.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{50EE83C5-94ED-9F44-9603-0E4ADEDC183D}|MeterManager.csproj|solutionrelative:pages\\meterstatus.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{50EE83C5-94ED-9F44-9603-0E4ADEDC183D}|MeterManager.csproj|c:\\users\\cgaidys\\metermanager\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{50EE83C5-94ED-9F44-9603-0E4ADEDC183D}|MeterManager.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{50EE83C5-94ED-9F44-9603-0E4ADEDC183D}|MeterManager.csproj|c:\\users\\cgaidys\\metermanager\\wwwroot\\css\\livegraph.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{50EE83C5-94ED-9F44-9603-0E4ADEDC183D}|MeterManager.csproj|solutionrelative:wwwroot\\css\\livegraph.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{50EE83C5-94ED-9F44-9603-0E4ADEDC183D}|MeterManager.csproj|c:\\users\\cgaidys\\metermanager\\pages\\livegraph.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{50EE83C5-94ED-9F44-9603-0E4ADEDC183D}|MeterManager.csproj|solutionrelative:pages\\livegraph.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{50EE83C5-94ED-9F44-9603-0E4ADEDC183D}|MeterManager.csproj|c:\\users\\cgaidys\\metermanager\\pages\\api\\activeflow.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{50EE83C5-94ED-9F44-9603-0E4ADEDC183D}|MeterManager.csproj|solutionrelative:pages\\api\\activeflow.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{50EE83C5-94ED-9F44-9603-0E4ADEDC183D}|MeterManager.csproj|c:\\users\\cgaidys\\metermanager\\pages\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{50EE83C5-94ED-9F44-9603-0E4ADEDC183D}|MeterManager.csproj|solutionrelative:pages\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{50EE83C5-94ED-9F44-9603-0E4ADEDC183D}|MeterManager.csproj|c:\\users\\cgaidys\\metermanager\\pages\\api\\activeflow.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{50EE83C5-94ED-9F44-9603-0E4ADEDC183D}|MeterManager.csproj|solutionrelative:pages\\api\\activeflow.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{50EE83C5-94ED-9F44-9603-0E4ADEDC183D}|MeterManager.csproj|c:\\users\\cgaidys\\metermanager\\models\\ethermeterprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{50EE83C5-94ED-9F44-9603-0E4ADEDC183D}|MeterManager.csproj|solutionrelative:models\\ethermeterprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{50EE83C5-94ED-9F44-9603-0E4ADEDC183D}|MeterManager.csproj|c:\\users\\cgaidys\\metermanager\\models\\ethermeterreading.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{50EE83C5-94ED-9F44-9603-0E4ADEDC183D}|MeterManager.csproj|solutionrelative:models\\ethermeterreading.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{50EE83C5-94ED-9F44-9603-0E4ADEDC183D}|MeterManager.csproj|c:\\users\\cgaidys\\metermanager\\models\\ethermeterthreshold.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{50EE83C5-94ED-9F44-9603-0E4ADEDC183D}|MeterManager.csproj|solutionrelative:models\\ethermeterthreshold.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{50EE83C5-94ED-9F44-9603-0E4ADEDC183D}|MeterManager.csproj|c:\\users\\cgaidys\\metermanager\\models\\ethermeterthresholdoffset.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{50EE83C5-94ED-9F44-9603-0E4ADEDC183D}|MeterManager.csproj|solutionrelative:models\\ethermeterthresholdoffset.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{50EE83C5-94ED-9F44-9603-0E4ADEDC183D}|MeterManager.csproj|c:\\users\\cgaidys\\metermanager\\models\\waterreadingviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{50EE83C5-94ED-9F44-9603-0E4ADEDC183D}|MeterManager.csproj|solutionrelative:models\\waterreadingviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{50EE83C5-94ED-9F44-9603-0E4ADEDC183D}|MeterManager.csproj|c:\\users\\cgaidys\\metermanager\\pages\\thresholdmgmtshowprofile.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{50EE83C5-94ED-9F44-9603-0E4ADEDC183D}|MeterManager.csproj|solutionrelative:pages\\thresholdmgmtshowprofile.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{50EE83C5-94ED-9F44-9603-0E4ADEDC183D}|MeterManager.csproj|c:\\users\\cgaidys\\metermanager\\pages\\thresholdmgmtlistmeters.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{50EE83C5-94ED-9F44-9603-0E4ADEDC183D}|MeterManager.csproj|solutionrelative:pages\\thresholdmgmtlistmeters.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{50EE83C5-94ED-9F44-9603-0E4ADEDC183D}|MeterManager.csproj|c:\\users\\cgaidys\\metermanager\\pages\\privacy.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{50EE83C5-94ED-9F44-9603-0E4ADEDC183D}|MeterManager.csproj|solutionrelative:pages\\privacy.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{50EE83C5-94ED-9F44-9603-0E4ADEDC183D}|MeterManager.csproj|c:\\users\\cgaidys\\metermanager\\pages\\meterwithstatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{50EE83C5-94ED-9F44-9603-0E4ADEDC183D}|MeterManager.csproj|solutionrelative:pages\\meterwithstatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{50EE83C5-94ED-9F44-9603-0E4ADEDC183D}|MeterManager.csproj|c:\\users\\cgaidys\\metermanager\\metermanager.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{50EE83C5-94ED-9F44-9603-0E4ADEDC183D}|MeterManager.csproj|solutionrelative:metermanager.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,63 +78,204 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "LiveGraph.cshtml",
-              "DocumentMoniker": "C:\\Users\\cgaidys\\MeterManager\\Pages\\LiveGraph.cshtml",
-              "RelativeDocumentMoniker": "Pages\\LiveGraph.cshtml",
-              "ToolTip": "C:\\Users\\cgaidys\\MeterManager\\Pages\\LiveGraph.cshtml",
-              "RelativeToolTip": "Pages\\LiveGraph.cshtml",
-              "ViewState": "AgIAAFwAAAAAAAAAAAAAAHQAAAAxAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-06-06T20:19:44.95Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\cgaidys\\MeterManager\\Pages\\Index.cshtml",
-              "RelativeDocumentMoniker": "Pages\\Index.cshtml",
-              "ToolTip": "C:\\Users\\cgaidys\\MeterManager\\Pages\\Index.cshtml",
-              "RelativeToolTip": "Pages\\Index.cshtml",
-              "ViewState": "AgIAAIsAAAAAAAAAAAAAAKMAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-06-06T20:09:00.668Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
               "Title": "ActiveFlow.cshtml.cs",
               "DocumentMoniker": "C:\\Users\\cgaidys\\MeterManager\\Pages\\Api\\ActiveFlow.cshtml.cs",
               "RelativeDocumentMoniker": "Pages\\Api\\ActiveFlow.cshtml.cs",
               "ToolTip": "C:\\Users\\cgaidys\\MeterManager\\Pages\\Api\\ActiveFlow.cshtml.cs",
               "RelativeToolTip": "Pages\\Api\\ActiveFlow.cshtml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAA/AAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAI0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-06T18:31:26.132Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "MeterManager",
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\cgaidys\\MeterManager\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\cgaidys\\MeterManager\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-12T14:46:43.871Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "LiveGraph.cshtml",
+              "DocumentMoniker": "C:\\Users\\cgaidys\\MeterManager\\Pages\\LiveGraph.cshtml",
+              "RelativeDocumentMoniker": "Pages\\LiveGraph.cshtml",
+              "ToolTip": "C:\\Users\\cgaidys\\MeterManager\\Pages\\LiveGraph.cshtml",
+              "RelativeToolTip": "Pages\\LiveGraph.cshtml",
+              "ViewState": "AgIAAIYAAAAAAAAAAAAIwLYAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-06T20:19:44.95Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ActiveFlow.cshtml",
+              "DocumentMoniker": "C:\\Users\\cgaidys\\MeterManager\\Pages\\Api\\ActiveFlow.cshtml",
+              "RelativeDocumentMoniker": "Pages\\Api\\ActiveFlow.cshtml",
+              "ToolTip": "C:\\Users\\cgaidys\\MeterManager\\Pages\\Api\\ActiveFlow.cshtml",
+              "RelativeToolTip": "Pages\\Api\\ActiveFlow.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-12T13:44:28.396Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "WaterReadingViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\cgaidys\\MeterManager\\Models\\WaterReadingViewModel.cs",
+              "RelativeDocumentMoniker": "Models\\WaterReadingViewModel.cs",
+              "ToolTip": "C:\\Users\\cgaidys\\MeterManager\\Models\\WaterReadingViewModel.cs",
+              "RelativeToolTip": "Models\\WaterReadingViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-12T13:36:46.681Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "EthermeterThresholdOffset.cs",
+              "DocumentMoniker": "C:\\Users\\cgaidys\\MeterManager\\Models\\EthermeterThresholdOffset.cs",
+              "RelativeDocumentMoniker": "Models\\EthermeterThresholdOffset.cs",
+              "ToolTip": "C:\\Users\\cgaidys\\MeterManager\\Models\\EthermeterThresholdOffset.cs",
+              "RelativeToolTip": "Models\\EthermeterThresholdOffset.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-12T13:36:46.582Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "EtherMeterThreshold.cs",
+              "DocumentMoniker": "C:\\Users\\cgaidys\\MeterManager\\Models\\EtherMeterThreshold.cs",
+              "RelativeDocumentMoniker": "Models\\EtherMeterThreshold.cs",
+              "ToolTip": "C:\\Users\\cgaidys\\MeterManager\\Models\\EtherMeterThreshold.cs",
+              "RelativeToolTip": "Models\\EtherMeterThreshold.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-12T13:36:46.48Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "EtherMeterReading.cs",
+              "DocumentMoniker": "C:\\Users\\cgaidys\\MeterManager\\Models\\EtherMeterReading.cs",
+              "RelativeDocumentMoniker": "Models\\EtherMeterReading.cs",
+              "ToolTip": "C:\\Users\\cgaidys\\MeterManager\\Models\\EtherMeterReading.cs",
+              "RelativeToolTip": "Models\\EtherMeterReading.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-12T13:36:46.382Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "EtherMeterProfile.cs",
+              "DocumentMoniker": "C:\\Users\\cgaidys\\MeterManager\\Models\\EtherMeterProfile.cs",
+              "RelativeDocumentMoniker": "Models\\EtherMeterProfile.cs",
+              "ToolTip": "C:\\Users\\cgaidys\\MeterManager\\Models\\EtherMeterProfile.cs",
+              "RelativeToolTip": "Models\\EtherMeterProfile.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-12T13:36:45.935Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "ThresholdMgmtShowProfile.cshtml",
+              "DocumentMoniker": "C:\\Users\\cgaidys\\MeterManager\\Pages\\ThresholdMgmtShowProfile.cshtml",
+              "RelativeDocumentMoniker": "Pages\\ThresholdMgmtShowProfile.cshtml",
+              "ToolTip": "C:\\Users\\cgaidys\\MeterManager\\Pages\\ThresholdMgmtShowProfile.cshtml",
+              "RelativeToolTip": "Pages\\ThresholdMgmtShowProfile.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-12T13:36:42.446Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Privacy.cshtml",
+              "DocumentMoniker": "C:\\Users\\cgaidys\\MeterManager\\Pages\\Privacy.cshtml",
+              "RelativeDocumentMoniker": "Pages\\Privacy.cshtml",
+              "ToolTip": "C:\\Users\\cgaidys\\MeterManager\\Pages\\Privacy.cshtml",
+              "RelativeToolTip": "Pages\\Privacy.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-12T13:36:40.948Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "MeterWithStatus.cs",
+              "DocumentMoniker": "C:\\Users\\cgaidys\\MeterManager\\Pages\\MeterWithStatus.cs",
+              "RelativeDocumentMoniker": "Pages\\MeterWithStatus.cs",
+              "ToolTip": "C:\\Users\\cgaidys\\MeterManager\\Pages\\MeterWithStatus.cs",
+              "RelativeToolTip": "Pages\\MeterWithStatus.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-12T13:36:40.071Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\cgaidys\\MeterManager\\Pages\\Index.cshtml",
+              "RelativeDocumentMoniker": "Pages\\Index.cshtml",
+              "ToolTip": "C:\\Users\\cgaidys\\MeterManager\\Pages\\Index.cshtml",
+              "RelativeToolTip": "Pages\\Index.cshtml",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAKMAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-06T20:09:00.668Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MeterStatus.cshtml",
+              "DocumentMoniker": "C:\\Users\\cgaidys\\MeterManager\\Pages\\MeterStatus.cshtml",
+              "RelativeDocumentMoniker": "Pages\\MeterStatus.cshtml",
+              "ToolTip": "C:\\Users\\cgaidys\\MeterManager\\Pages\\MeterStatus.cshtml",
+              "RelativeToolTip": "Pages\\MeterStatus.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-12T13:36:39.292Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "livegraph.css",
+              "DocumentMoniker": "C:\\Users\\cgaidys\\MeterManager\\wwwroot\\css\\livegraph.css",
+              "RelativeDocumentMoniker": "wwwroot\\css\\livegraph.css",
+              "ToolTip": "C:\\Users\\cgaidys\\MeterManager\\wwwroot\\css\\livegraph.css",
+              "RelativeToolTip": "wwwroot\\css\\livegraph.css",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-06-12T17:33:12.669Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "MeterManager.csproj",
               "DocumentMoniker": "C:\\Users\\cgaidys\\MeterManager\\MeterManager.csproj",
               "RelativeDocumentMoniker": "MeterManager.csproj",
               "ToolTip": "C:\\Users\\cgaidys\\MeterManager\\MeterManager.csproj",
               "RelativeToolTip": "MeterManager.csproj",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-06-06T17:56:25.867Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-06T17:56:25.867Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 13,
               "Title": "ThresholdMgmtListMeters.cshtml",
               "DocumentMoniker": "C:\\Users\\cgaidys\\MeterManager\\Pages\\ThresholdMgmtListMeters.cshtml",
               "RelativeDocumentMoniker": "Pages\\ThresholdMgmtListMeters.cshtml",
@@ -94,8 +283,7 @@
               "RelativeToolTip": "Pages\\ThresholdMgmtListMeters.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-06-06T16:08:05.549Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-06T16:08:05.549Z"
             }
           ]
         }

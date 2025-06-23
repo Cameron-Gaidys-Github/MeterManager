@@ -244,3 +244,4 @@ C:\Users\cgaidys\MeterManager\bin\Release\net9.0\runtimes\win\lib\net9.0\System.
 C:\Users\cgaidys\MeterManager\obj\Release\net9.0\MeterManager.sourcelink.json
 C:\Users\cgaidys\MeterManager\obj\Release\net9.0\compressed\zwczvpbrj9-l93i2b0kyz.gz
 C:\Users\cgaidys\MeterManager\obj\Release\net9.0\staticwebassets.upToDateCheck.txt
+C:\Users\cgaidys\MeterManager\obj\Release\net9.0\compressed\0daqq2abws-y3ax2gi8y6.gz

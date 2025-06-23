@@ -1,3 +1,4 @@
+C:\Users\cgaidys\MeterManager\wwwroot\css\livegraph.css
 C:\Users\cgaidys\MeterManager\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.rtl.min.css
 C:\Users\cgaidys\MeterManager\wwwroot\js\site.js
 C:\Users\cgaidys\MeterManager\wwwroot\lib\bootstrap\dist\js\bootstrap.esm.js.map
@@ -60,6 +61,7 @@ C:\Users\cgaidys\MeterManager\wwwroot\lib\bootstrap\dist\css\bootstrap.min.css.m
 C:\Users\cgaidys\MeterManager\wwwroot\lib\jquery-validation\dist\jquery.validate.min.js
 C:\Users\cgaidys\MeterManager\wwwroot\favicon.ico
 C:\Users\cgaidys\MeterManager\wwwroot\lib\bootstrap\dist\js\bootstrap.esm.min.js
+wwwroot\css\livegraph.css
 wwwroot\css\site.css
 wwwroot\favicon.ico
 wwwroot\images\green.png

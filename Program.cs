@@ -8,7 +8,15 @@ builder.Services.AddDbContext<SBCorpInetDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("SBCorpInetDb")));
 
 builder.Services.AddRazorPages();
-builder.Services.AddHttpClient();
+
+// The correct way: chain ConfigurePrimaryHttpMessageHandler directly after AddHttpClient
+builder.Services
+    .AddHttpClient("Default") 
+    .ConfigurePrimaryHttpMessageHandler(() =>
+        new SocketsHttpHandler
+        {
+            MaxConnectionsPerServer = 50
+        });
 
 var app = builder.Build();
 
@@ -18,6 +26,9 @@ if (!app.Environment.IsDevelopment())
     app.UseExceptionHandler("/Error");
     app.UseHsts();
 }
+
+builder.Services.AddResponseCompression();
+app.UseResponseCompression();
 
 app.UseHttpsRedirection();
 app.UseStaticFiles(); // Enables serving files from wwwroot

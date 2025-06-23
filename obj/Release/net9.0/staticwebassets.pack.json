@@ -5,6 +5,10 @@
       "PackagePath": "staticwebassets\\MeterManager.ig1384u36z.bundle.scp.css"
     },
     {
+      "Id": "C:\\Users\\cgaidys\\MeterManager\\wwwroot\\css\\livegraph.css",
+      "PackagePath": "staticwebassets\\css\\livegraph.css"
+    },
+    {
       "Id": "C:\\Users\\cgaidys\\MeterManager\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },

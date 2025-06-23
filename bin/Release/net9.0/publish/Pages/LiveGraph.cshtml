@@ -4,19 +4,30 @@
 }
 
 <h2>Live Flow Graph</h2>
-<div style="margin-bottom:10px;">
+<div class="mb-10">
     <button onclick="chart.resetZoom()">Reset Zoom</button>
 </div>
 
+<!-- Polling interval selector -->
+<div class="mb-10">
+    <label for="pollInterval">Polling Interval (seconds):</label>
+    <select id="pollInterval">
+        @for (int i = 1; i <= 10; i++)
+        {
+            <option value="@i">@i</option>
+        }
+    </select>
+</div>
+
 <!-- Responsive container for the chart -->
-<div style="position: relative; width: 100%; height: 60vh;">
+<div class="chart-container">
     <canvas id="liveFlowChart"></canvas>
 </div>
 
 <!-- Live values section (horizontal format) -->
-<div id="liveValues" style="margin-top:30px;">
+<div id="liveValues" class="mt-30">
     <h4>Current Flow Values</h4>
-    <table class="table table-bordered" style="width:100%;">
+    <table class="table table-bordered w-100">
         <thead>
             <tr>
                 <th></th>
@@ -47,6 +58,8 @@
         </tbody>
     </table>
 </div>
+
+<link rel="stylesheet" href="~/css/livegraph.css" />
 
 <!-- Chart.js v4.4.1 -->
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
@@ -80,7 +93,7 @@
         },
         options: {
             responsive: true,
-            maintainAspectRatio: false, // Allow container to control size
+            maintainAspectRatio: false,
             animation: false,
             scales: {
                 x: {
@@ -107,14 +120,13 @@
     });
 
     function updateHighFlowNA() {
-        // Set all highflow values to N/A except Claybrook (ID:5)
         for (let i = 1; i <= 4; i++) {
             document.getElementById('highflow-' + i).textContent = "N/A";
         }
     }
 
     function updateFlows() {
-        fetch('@Url.Content("~/Api/ActiveFlow")')
+        return fetch('@Url.Content("~/Api/ActiveFlow")')
             .then(r => r.json())
             .then(data => {
                 const now = new Date().toLocaleTimeString();
@@ -129,15 +141,12 @@
                         flowData[meterIdx].push(val);
                         if (flowData[meterIdx].length > 300) flowData[meterIdx].shift();
                     }
-                    // Update live values table
                     const flowElem = document.getElementById('flow-' + meter.meterID);
                     if (flowElem) flowElem.textContent = meter.flowRate ?? '--';
                 });
 
-                // Always set highflow-1 to highflow-4 to N/A
                 updateHighFlowNA();
 
-                // Only update highflow-5 (Claybrook)
                 const claybrook = data.find(m => m.meterID == 5);
                 if (claybrook) {
                     document.getElementById('highflow-5').textContent = claybrook.highFlowRate ?? "--";
@@ -149,8 +158,26 @@
             });
     }
 
+    // Improved polling logic
+    let pollInterval = 1000; // default 1 second
+    let pollTimeout = null;
+    let polling = false;
+
+    function pollFlows() {
+        if (polling) return;
+        polling = true;
+        updateFlows().finally(() => {
+            polling = false;
+            pollTimeout = setTimeout(pollFlows, pollInterval);
+        });
+    }
+
     document.addEventListener('DOMContentLoaded', () => {
-        updateFlows();
-        setInterval(updateFlows, 1000);
+        pollFlows();
+        document.getElementById('pollInterval').addEventListener('change', function () {
+            pollInterval = parseInt(this.value, 10) * 1000;
+            if (pollTimeout) clearTimeout(pollTimeout);
+            pollFlows();
+        });
     });
 </script>

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "Z5y5FmTEH1mctrf/FsxElQGna8OTtLaHjS9mFb0tpaA=",
+  "Hash": "1ETqyPOeR23FIOs8biEPgFDv5Ht8R6LwUUXs6q2BJyQ=",
   "Source": "MeterManager",
   "BasePath": "_content/MeterManager",
   "Mode": "Default",
@@ -16,6 +16,27 @@
     }
   ],
   "Assets": [
+    {
+      "Identity": "C:\\Users\\cgaidys\\MeterManager\\obj\\Release\\net9.0\\compressed\\0daqq2abws-y3ax2gi8y6.gz",
+      "SourceId": "MeterManager",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\cgaidys\\MeterManager\\obj\\Release\\net9.0\\compressed\\",
+      "BasePath": "_content/MeterManager",
+      "RelativePath": "css/livegraph#[.{fingerprint=y3ax2gi8y6}]?.css.gz",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "C:\\Users\\cgaidys\\MeterManager\\wwwroot\\css\\livegraph.css",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "Fingerprint": "5nnikjpgvj",
+      "Integrity": "MZjfZ59Rv+VRPz3Lfq+aIf7TGlDP2XG6VRdDRocExaU=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "C:\\Users\\cgaidys\\MeterManager\\wwwroot\\css\\livegraph.css"
+    },
     {
       "Identity": "C:\\Users\\cgaidys\\MeterManager\\obj\\Release\\net9.0\\compressed\\1iqxz1ohio-k8d9w2qqmf.gz",
       "SourceId": "MeterManager",
@@ -1403,6 +1424,27 @@
       "OriginalItemSpec": "C:\\Users\\cgaidys\\MeterManager\\obj\\Release\\net9.0\\scopedcss\\projectbundle\\MeterManager.bundle.scp.css"
     },
     {
+      "Identity": "C:\\Users\\cgaidys\\MeterManager\\wwwroot\\css\\livegraph.css",
+      "SourceId": "MeterManager",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\cgaidys\\MeterManager\\wwwroot\\",
+      "BasePath": "_content/MeterManager",
+      "RelativePath": "css/livegraph#[.{fingerprint}]?.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "y3ax2gi8y6",
+      "Integrity": "blMQanBDd6V+gbLbIgBWZadQ8r89V2UosKbPp1jc/Qs=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\livegraph.css"
+    },
+    {
       "Identity": "C:\\Users\\cgaidys\\MeterManager\\wwwroot\\css\\site.css",
       "SourceId": "MeterManager",
       "SourceType": "Discovered",
@@ -2769,6 +2811,304 @@
     }
   ],
   "Endpoints": [
+    {
+      "Route": "css/livegraph.css",
+      "AssetFile": "C:\\Users\\cgaidys\\MeterManager\\obj\\Release\\net9.0\\compressed\\0daqq2abws-y3ax2gi8y6.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.004098360656"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "243"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"MZjfZ59Rv+VRPz3Lfq+aIf7TGlDP2XG6VRdDRocExaU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 12 Jun 2025 17:37:36 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"blMQanBDd6V+gbLbIgBWZadQ8r89V2UosKbPp1jc/Qs=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-blMQanBDd6V+gbLbIgBWZadQ8r89V2UosKbPp1jc/Qs="
+        }
+      ]
+    },
+    {
+      "Route": "css/livegraph.css",
+      "AssetFile": "C:\\Users\\cgaidys\\MeterManager\\wwwroot\\css\\livegraph.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "455"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"blMQanBDd6V+gbLbIgBWZadQ8r89V2UosKbPp1jc/Qs=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 12 Jun 2025 17:37:36 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-blMQanBDd6V+gbLbIgBWZadQ8r89V2UosKbPp1jc/Qs="
+        }
+      ]
+    },
+    {
+      "Route": "css/livegraph.css.gz",
+      "AssetFile": "C:\\Users\\cgaidys\\MeterManager\\obj\\Release\\net9.0\\compressed\\0daqq2abws-y3ax2gi8y6.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "243"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"MZjfZ59Rv+VRPz3Lfq+aIf7TGlDP2XG6VRdDRocExaU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 12 Jun 2025 17:37:36 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-MZjfZ59Rv+VRPz3Lfq+aIf7TGlDP2XG6VRdDRocExaU="
+        }
+      ]
+    },
+    {
+      "Route": "css/livegraph.y3ax2gi8y6.css",
+      "AssetFile": "C:\\Users\\cgaidys\\MeterManager\\obj\\Release\\net9.0\\compressed\\0daqq2abws-y3ax2gi8y6.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.004098360656"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "243"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"MZjfZ59Rv+VRPz3Lfq+aIf7TGlDP2XG6VRdDRocExaU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 12 Jun 2025 17:37:36 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"blMQanBDd6V+gbLbIgBWZadQ8r89V2UosKbPp1jc/Qs=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "y3ax2gi8y6"
+        },
+        {
+          "Name": "label",
+          "Value": "css/livegraph.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-blMQanBDd6V+gbLbIgBWZadQ8r89V2UosKbPp1jc/Qs="
+        }
+      ]
+    },
+    {
+      "Route": "css/livegraph.y3ax2gi8y6.css",
+      "AssetFile": "C:\\Users\\cgaidys\\MeterManager\\wwwroot\\css\\livegraph.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "455"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"blMQanBDd6V+gbLbIgBWZadQ8r89V2UosKbPp1jc/Qs=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 12 Jun 2025 17:37:36 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "y3ax2gi8y6"
+        },
+        {
+          "Name": "label",
+          "Value": "css/livegraph.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-blMQanBDd6V+gbLbIgBWZadQ8r89V2UosKbPp1jc/Qs="
+        }
+      ]
+    },
+    {
+      "Route": "css/livegraph.y3ax2gi8y6.css.gz",
+      "AssetFile": "C:\\Users\\cgaidys\\MeterManager\\obj\\Release\\net9.0\\compressed\\0daqq2abws-y3ax2gi8y6.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "243"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"MZjfZ59Rv+VRPz3Lfq+aIf7TGlDP2XG6VRdDRocExaU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 12 Jun 2025 17:37:36 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "y3ax2gi8y6"
+        },
+        {
+          "Name": "label",
+          "Value": "css/livegraph.css.gz"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-MZjfZ59Rv+VRPz3Lfq+aIf7TGlDP2XG6VRdDRocExaU="
+        }
+      ]
+    },
     {
       "Route": "css/site.a22t12x76q.css",
       "AssetFile": "C:\\Users\\cgaidys\\MeterManager\\obj\\Release\\net9.0\\compressed\\xsfit5k5f3-a22t12x76q.gz",
